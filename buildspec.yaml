@@ -16,7 +16,7 @@ phases:
   post_build:
     on-failure: ABORT
     commands:
-      - echo "SAM packaging completed on `date`"
+      - echo "SAM packaging completed on `date` "
 artifacts:
   files:
     ./
