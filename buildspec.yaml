@@ -15,6 +15,8 @@ phases:
     on-failure: ABORT
     commands:
       - echo "Migrating DB on `date` in `pwd`"
+      - echo "DB URL $dburl" 
+      - echo "DB User $dbuser"
       - flyway migrate -url=$dburl -user=$dbuser -password=$dbpassword
   post_build:
     on-failure: ABORT
