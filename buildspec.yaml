@@ -18,7 +18,7 @@ phases:
       - echo "DB URL $dburl" 
       - echo "DB User $dbuser"
       # - flyway migrate -url=$dburl -user=$dbuser -password=$dbpassword
-      - flyway migrate -url="rds-sample-cluster-instance.chq2lxfvsjxh.ap-northeast-2.rds.amazonaws.com" -user="master" -password="password"
+      - flyway migrate -url="jdbc:mysql://rds-sample-cluster-instance.chq2lxfvsjxh.ap-northeast-2.rds.amazonaws.com:3306/testflyway" -user="master" -password="password"
   post_build:
     on-failure: ABORT
     commands:
