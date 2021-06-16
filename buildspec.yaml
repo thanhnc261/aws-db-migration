@@ -9,10 +9,10 @@ phases:
   install:
     on-failure: ABORT
     runtime-versions:
-       python: 3.8
+      java: openjdk8
     commands:
       - echo "Installing Flyway ..."
-      - sudo wget -qO- https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/6.5.3/flyway-commandline-6.5.3-linux-x64.tar.gz | tar xvz && sudo ln -s `pwd`/flyway-6.5.3/flyway /usr/local/bin 
+      - wget -qO- https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/7.9.2/flyway-commandline-7.9.2.tar.gz | tar xvz && ln -s `pwd`/flyway-7.9.2/flyway /usr/local/bin 
   build:
     on-failure: ABORT
     commands:
