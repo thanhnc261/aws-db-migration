@@ -8,8 +8,6 @@ env:
 phases:
   install:
     on-failure: ABORT
-    runtime-versions:
-      java: openjdk8
     commands:
       - echo "Installing Flyway ..."
       - wget -qO- https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/7.9.2/flyway-commandline-7.9.2.tar.gz | tar xvz && ln -s `pwd`/flyway-7.9.2/flyway /usr/local/bin 
